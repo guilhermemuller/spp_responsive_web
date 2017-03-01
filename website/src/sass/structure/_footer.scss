@@ -1,0 +1,81 @@
+//
+//-- Footer
+//
+
+.page-footer {
+	background: #dcdcde;
+	padding: em(100) 1.5em;
+}
+
+.footer-module {
+	margin-bottom: 2em;
+	font-size: em(14);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.footer-module__icon, .footer-module__content {
+	display: inline-block;
+	vertical-align: middle;
+
+	@include tablet-port {
+		vertical-align: top;
+	}
+}
+
+.footer-module__icon {
+	background: $color-base-light no-repeat center center;
+	background-size: em(36) auto;
+	width: em(87);
+	height: em(87);
+	border-radius: 100%;
+}
+
+.footer-module__content {
+	color: #4d4d4d;
+	margin-left: 2em;
+
+	a {
+		color: inherit;
+		@include hover-underline;
+	}
+}
+
+.footer-module__title {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 1em;
+	font-size: 1em;
+}
+
+.footer-module--call-me {
+	.footer-module__icon {
+		background-image: url(../images/icon_phone.png);
+
+		@include retina {
+			background-image: url(../images/icon_phone@2x.png);
+		}
+	}
+}
+
+.footer-module--address {
+	.footer-module__icon {
+		background-image: url(../images/icon_address.png);
+
+		@include retina {
+			background-image: url(../images/icon_address@2x.png);
+		}
+	}
+}
+
+.footer-module--email {
+	.footer-module__icon {
+		background-image: url(../images/icon_email.png);
+
+		@include retina {
+			background-image: url(../images/icon_email@2x.png);
+		}
+	}
+}
