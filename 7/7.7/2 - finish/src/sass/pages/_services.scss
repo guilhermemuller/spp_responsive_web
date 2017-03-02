@@ -1,0 +1,67 @@
+//
+//-- Services
+//
+
+.services__item {
+	margin-bottom: 2em;
+	text-align: center;
+	font-size: em(14);
+
+	@include tablet-port {
+		margin-bottom: 3em;
+		font-size: em(16);
+	}
+
+	@include wide {
+		margin-bottom: 4em;
+		font-size: em(18);
+	}
+}
+
+.services__item-icon {
+	display: inline-block;
+	width: em(115);
+	height: em(115);
+	background: linear-gradient(45deg, $color-gradient1, $color-gradient2);
+	border-radius: 100%;
+	margin-bottom: 1.3em;
+	position: relative;
+
+	&::after {
+		content: " ";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: rem(52);
+		height: rem(46);
+		background: url(../images/icon_sprite.png) no-repeat center -737px;
+		background-size: rem(52) auto;
+		transform: translate(-50%, -50%);
+
+		@include retina {
+			background-image: url(../images/icon_sprite@2x.png);
+		}
+	}
+}
+
+.services__item-title {
+	font-size: em(25);
+	font-weight: bold;
+	margin-bottom: 1.3rem;
+	text-transform: uppercase;
+	color: #4d4d4d;
+}
+
+.services__item-description {
+	color: #494949;
+	line-height: 1.9;
+}
+
+@for $i from 1 through 6 {
+	.services__#{$i} {
+		.services__item-icon::after {
+			background-position: center (($i * -246px) - 491px);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+//
+//-- General mixins and functions
+//
+
+@function em($pixels, $ref: 16) {
+	@return ($pixels / $ref) * 1em;
+}
+
+@function rem($pixels, $ref: 16) {
+	@return ($pixels / $ref) * 1rem;
+}
+
+@mixin hover-underline() {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
