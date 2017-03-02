@@ -9,10 +9,14 @@
 	height: em(200);
 
 	@include tablet-port {
-		height: em(400);
+		height: em(350);
 	}
 
 	@include wide {
+		height: em(600);
+	}
+
+	@include very-wide {
 		height: em(740);
 	}
 

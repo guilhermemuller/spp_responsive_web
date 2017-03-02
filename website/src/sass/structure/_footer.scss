@@ -26,11 +26,28 @@
 }
 
 .footer-module__icon {
-	background: $color-base-light no-repeat center center;
-	background-size: em(36) auto;
+	background: $color-base-light;
 	width: em(87);
 	height: em(87);
 	border-radius: 100%;
+	position: relative;
+
+	&::after {
+		content: " ";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: rem(52);
+		height: rem(46);
+		background: url(../images/icon_sprite.png) no-repeat center 0;
+		background-size: rem(52) auto;
+		transform: translate(-50%, -50%);
+
+		@include retina {
+			background-image: url(../images/icon_sprite@2x.png);
+		}
+	}
 }
 
 .footer-module__content {
@@ -52,30 +69,18 @@
 
 .footer-module--call-me {
 	.footer-module__icon {
-		background-image: url(../images/icon_phone.png);
-
-		@include retina {
-			background-image: url(../images/icon_phone@2x.png);
-		}
+		background-position: center 18px;
 	}
 }
 
 .footer-module--address {
-	.footer-module__icon {
-		background-image: url(../images/icon_address.png);
-
-		@include retina {
-			background-image: url(../images/icon_address@2x.png);
-		}
+	.footer-module__icon::after {
+		background-position: center -244px;
 	}
 }
 
 .footer-module--email {
-	.footer-module__icon {
-		background-image: url(../images/icon_email.png);
-
-		@include retina {
-			background-image: url(../images/icon_email@2x.png);
-		}
+	.footer-module__icon::after {
+		background-position: center -490px;
 	}
 }

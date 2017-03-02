@@ -58,6 +58,10 @@
 	background: #FFF;
 	width: 100%;
 	transition: background 0.2s ease;
+	
+	// remove Safari's rounded corners
+	border-radius: 0;
+	-webkit-appearance: none;
 
 	&:focus {
 		background: #FFC;
