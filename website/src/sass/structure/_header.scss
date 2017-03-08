@@ -6,7 +6,7 @@
 	background: $color-base;
 	color: #FFF;
 	text-align: center;
-	padding: 1em;
+	padding: 1em 0 0;
 
 	@include tablet-port {
 		padding: 1.5em;
@@ -14,10 +14,13 @@
 }
 
 .page-nav__li {
-	display: inline-block;
 	position: relative;
+	border-bottom: 1px solid #CCC;
 	
 	@include tablet-port {
+		border: 0;
+		display: inline-block;
+
 		&::after {
 			content: "-";
 			position: absolute;
@@ -47,5 +50,28 @@
 	@include tablet-port {
 		font-size: em(18);
 		padding: 1em 2em;
+	}
+}
+
+.page-nav__hamburguer {
+	display: inline-block;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+	margin-bottom: 1em;
+
+	&:hover {
+		transform: scale(1.2);
+	}
+
+	@include tablet-port {
+		display: none;
+	}
+}
+
+.page-nav__ul {
+	display: none;
+
+	@include tablet-port {
+		display: block !important;
 	}
 }

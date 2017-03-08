@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
+var browserSync = require('browser-sync').create();
 
 gulp.task('css', function() {
 	return gulp.src('src/sass/**/*.scss')
@@ -13,6 +14,7 @@ gulp.task('css', function() {
         }))
         .pipe(sourcemaps.write('./maps'))
 		.pipe(gulp.dest('dist/css'))
+		.pipe(browserSync.stream())
 });
 
 gulp.task('images', function(){
@@ -24,6 +26,7 @@ gulp.task('images', function(){
 gulp.task('copy', function() {
 	return gulp.src('src/*.html')
 		.pipe(gulp.dest('dist'))
+		.pipe(browserSync.stream())
 });
 
 gulp.task('watch', function(){

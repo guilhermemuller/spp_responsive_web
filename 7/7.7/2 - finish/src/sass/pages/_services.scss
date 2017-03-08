@@ -19,29 +19,18 @@
 }
 
 .services__item-icon {
+	font-size: em(45);
 	display: inline-block;
-	width: em(115);
-	height: em(115);
+	width: rem(115);
+	height: rem(115);
 	background: linear-gradient(45deg, $color-gradient1, $color-gradient2);
 	border-radius: 100%;
-	margin-bottom: 1.3em;
+	margin-bottom: 1.3rem;
 	position: relative;
+	color: #FFF;
 
-	&::after {
-		content: " ";
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: rem(52);
-		height: rem(46);
-		background: url(../images/icon_sprite.png) no-repeat center -737px;
-		background-size: rem(52) auto;
-		transform: translate(-50%, -50%);
-
-		@include retina {
-			background-image: url(../images/icon_sprite@2x.png);
-		}
+	.fa {
+		@include vertical-center;
 	}
 }
 
@@ -56,12 +45,4 @@
 .services__item-description {
 	color: #494949;
 	line-height: 1.9;
-}
-
-@for $i from 1 through 6 {
-	.services__#{$i} {
-		.services__item-icon::after {
-			background-position: center (($i * -246px) - 491px);
-		}
-	}
 }
