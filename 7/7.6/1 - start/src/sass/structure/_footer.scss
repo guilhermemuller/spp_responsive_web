@@ -8,36 +8,30 @@
 }
 
 .footer-module {
+	margin-bottom: 2em;
 	font-size: em(14);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .footer-module__icon, .footer-module__content {
 	display: inline-block;
-	vertical-align: middle;
-
-	@include tablet-port {
-		vertical-align: top;
-	}
+	vertical-align: top;
 }
 
 .footer-module__icon {
 	background: $color-base-light;
-	width: em(87);
-	height: em(87);
+	width: rem(87);
+	height: rem(87);
 	border-radius: 100%;
 	position: relative;
+	font-size: em(45);
+	color: #FFF;
 
-	&::after {
-		content: " ";
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: rem(52);
-		height: rem(46);
-		background: url(../images/icon_sprite.png) no-repeat center 0;
-		background-size: rem(52) auto;
-		transform: translate(-50%, -50%);
+	.fa {
+		@include vertical-center;
 	}
 }
 
@@ -56,22 +50,4 @@
 	font-weight: bold;
 	margin-bottom: 1em;
 	font-size: 1em;
-}
-
-.footer-module--call-me {
-	.footer-module__icon {
-		background-position: center 18px;
-	}
-}
-
-.footer-module--address {
-	.footer-module__icon::after {
-		background-position: center -244px;
-	}
-}
-
-.footer-module--email {
-	.footer-module__icon::after {
-		background-position: center -490px;
-	}
 }
