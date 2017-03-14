@@ -23,18 +23,18 @@ gulp.task('images', function(){
 		.pipe(gulp.dest('dist/images'))
 });
 
+gulp.task('copy', function() {
+	return gulp.src('src/**/*.+(html|js)')
+		.pipe(gulp.dest('dist'))
+		.pipe(browserSync.stream())
+});
+
 gulp.task('browserSync', function() {
 	browserSync.init({
 		server: {
 			baseDir: 'dist'
 		},
 	})
-});
-
-gulp.task('copy', function() {
-	return gulp.src('src/**/*.+(html|js)')
-		.pipe(gulp.dest('dist'))
-		.pipe(browserSync.stream())
 });
 
 gulp.task('watch', ['browserSync', 'css'], function(){

@@ -29,7 +29,15 @@ gulp.task('copy', function() {
 		.pipe(browserSync.stream())
 });
 
-gulp.task('watch', function(){
+gulp.task('browserSync', function() {
+	browserSync.init({
+		server: {
+			baseDir: 'dist'
+		},
+	})
+});
+
+gulp.task('watch', ['browserSync', 'css'], function(){
 	gulp.watch('src/sass/**/*.scss', ['css']);
 	gulp.watch('src/*.html', ['copy']);
 });

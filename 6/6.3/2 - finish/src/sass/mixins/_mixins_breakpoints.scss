@@ -3,31 +3,31 @@
 //
 
 @mixin phone-land {
-	@media (min-width: #{$very-small-width}) {
+	@media (min-width: $very-small-width) {
 		@content;
 	}
 }
 
 @mixin tablet-port {
-	@media (min-width: #{$small-width}) {
+	@media (min-width: $small-width) {
 		@content;
 	}
 }
 
 @mixin tablet-land {
-	@media (min-width: #{$medium-width}) {
+	@media (min-width: $medium-width) {
 		@content;
 	}
 }
 
 @mixin wide {
-	@media (min-width: #{$large-width}) {
+	@media (min-width: $large-width) {
 		@content;
 	}
 }
 
 @mixin very-wide {
-	@media (min-width: #{$very-large-width}) {
+	@media (min-width: $very-large-width) {
 		@content;
 	}
 }

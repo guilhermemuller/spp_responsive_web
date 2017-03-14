@@ -13,35 +13,15 @@
 
 .contact__wrapper {
 	max-width: em(978);
-	padding: em(40) 0;
-
-	@include tablet-port {
-		padding: em(75) 0;
-	}
-
-	@include wide {
-		padding: em(150) 0;
-	}
+	padding: em(150) 0;
 }
 
 .contact-form {
-	font-size: em(14);
-
-	@include tablet-port {
-		font-size: em(16);
-	}
-
-	@include wide {
-		font-size: em(18);
-	}
+	font-size: em(18);
 }
 
 .contact-form__container {
 	margin-bottom: 0.75em;
-}
-
-.contact-form__label, .contact-form__field {
-	font-size: em(18);
 }
 
 .contact-form__label {
@@ -74,7 +54,6 @@
 }
 
 .contact-form__button {
-	font-size: em(18);
 	font-weight: bold;
 	border: 0;
 	color: #FFF;
