@@ -18,3 +18,10 @@
 	line-height: 1;
 	text-align: center;
 	@include vertical-center;
+}
+
+.welcome__title-complement {
+	font-size: rem(36);
+	display: block;
+	font-weight: 600;
+}
