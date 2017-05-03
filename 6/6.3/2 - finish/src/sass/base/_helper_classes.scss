@@ -2,7 +2,7 @@
 //-- Helper Classes
 //
 
-.clearfix {
+.clearfix, .grid {
 	&::before, &::after {
 		content: "";
 		display: table;
